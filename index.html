@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ស្វែងរកជាងម៉ូតូ - Telegram Mini App</title>
+  
+  <!-- Telegram Web App SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  
+  <!-- Link CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="app-container">
+    
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="header-icon">🛠️</div>
+      <div class="header-text">
+        <h2>ជាងម៉ូតូនៅជិតអ្នក</h2>
+        <p id="user-greeting">កំពុងផ្ទុកព័ត៌មានអ្នកប្រើប្រាស់...</p>
+      </div>
+    </header>
+
+    <!-- Search & Filter Section -->
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="ស្វែងរកតាមឈ្មោះជាង ឬទីតាំង (ឧ. ទួលគោក)..."
+          autocomplete="off"
+        >
+      </div>
+      
+      <!-- Quick Filter Categories -->
+      <div class="filter-chips">
+        <button class="chip active" data-filter="all">ទាំងអស់</button>
+        <button class="chip" data-filter="24h">២៤ម៉ោង</button>
+        <button class="chip" data-filter="repair">ជួសជុលម៉ាស៊ីន</button>
+        <button class="chip" data-filter="tire">ប៉ះកង់</button>
+      </div>
+    </section>
+
+    <!-- Mechanics List Section -->
+    <main class="content-section">
+      <div class="section-title">
+        <span>បញ្ជីជាងនៅក្បែរអ្នក</span>
+        <span id="result-count" class="badge">0 រកឃើញ</span>
+      </div>
+
+      <!-- Mechanic Cards Container -->
+      <div id="mechanicList" class="mechanic-list">
+        <!-- Dynamic JavaScript Cards will be rendered here -->
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="app-footer">
+      <p>តម្រូវការបន្ទាន់? សូមចុចហៅទូរស័ព្ទទៅកាន់ជាងផ្ទាល់។</p>
+      <small>© 2026 TweakkerBot Service</small>
+    </footer>
+
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
